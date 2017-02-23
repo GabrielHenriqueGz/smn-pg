@@ -1,11 +1,11 @@
 ## Installation
 
-    npm install devbox-pg
+    npm install smn-pg
 
 ## Use Example
 
 ```javascript
-require('devbox-pg')(config);
+require('smn-pg')(config);
 ```
 
 ### Only works on Node v6 and above ####
@@ -39,7 +39,7 @@ let config = {
     idleTimeoutMillis: 30000
 };;
 
-const pg = require('devbox-pg')(config);
+const pg = require('smn-pg')(config);
 
 ```
 
