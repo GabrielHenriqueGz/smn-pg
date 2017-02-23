@@ -102,7 +102,7 @@ pg.request()
 ### INPUTMANY (parameters)
 ```javascript
 pg.request()
-    .input('param1','param2','param3')
+    .inputMany('param1','param2','param3')
     .execute('procedureName', (err, data) => {
         if (err)
             return console.log(err);
