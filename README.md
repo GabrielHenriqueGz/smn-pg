@@ -50,10 +50,12 @@ const pg = require('devbox-pg')(config);
 
 *Params - Value* 
 ```javascript
+/* Informar os parâmetros na mesma sequencia da procedure */
+
 pg.request()
-    .input('param1')
-    .input('param2')
-    .input('param3')
+    .input('value')
+    .input('value')
+    .input('value')
     .execute('procedureName', (err, data) => {
         if (err)
             return console.log(err);
@@ -84,11 +86,11 @@ let obj = {
 
 /* O Nome dos atributos do objeto deve ter o mesmo nome dos parâmetros */
 /* O Objeto nunca deve possuir mais atributos do que parâmetros esperados pela procedure */
-/* Caso houver um padrão de prefixo, ele pode ser passado no 2 parâmetro do metodo -object- */
+/* Caso houver um padrão de prefixo, ele pode ser passado no 2 parâmetro do método */
 
 pg.request()
     .input(obj, /*Optional prefix name*/)
-    .input('paramName','value') /* Opicional junto com object */
+    .input('paramName','value') /* Optional together with object */
     .execute('procedureName', (err, data) => {
         if (err)
             return console.log(err);

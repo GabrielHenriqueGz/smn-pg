@@ -1,19 +1,19 @@
 {
-	"name": "devbox-pg",
-	"version": "2.0.0",
+	"name": "smn-pg",
+	"version": "1.0.0",
 	"description": "Encapsulated functions execute procedures for postgres (pg-db).",
 	"main": "./lib/index.js",
 	"scripts": {},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GustavoMaritan/devbox-pg.git"
+		"url": "git+https://github.com/smn-official/smn-pg.git"
 	},
-	"author": "Gustavo Maritan <gustavomaritan@gmail.com>",
+	"author": "SMN-OFFICIAL <github@smn.com.br>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/GustavoMaritan/devbox-pg/issues"
+		"url": "https://github.com/smn-official/smn-pg/issues"
 	},
-	"homepage": "https://github.com/GustavoMaritan/devbox-pg#readme",
+	"homepage": "https://github.com/smn-official/smn-pg#readme",
 	"dependencies": {
 		"pg": "^6.1.2",
 		"pg-db": "^1.1.0"
