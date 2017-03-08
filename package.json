@@ -1,6 +1,6 @@
 {
   "name": "smn-pg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Encapsulated functions execute procedures for postgres (pg-db).",
   "main": "./lib/index.js",
   "scripts": {},
