@@ -1,7 +1,7 @@
 {
   "name": "smn-pg",
-  "version": "1.0.4",
-  "description": "Encapsulated functions execute procedures for postgres (pg-db).",
+  "version": "2.0.0",
+  "description": "Encapsulated functions execute procedures for postgres (pg-promise) Sync/Async.",
   "main": "./lib/index.js",
   "scripts": {},
   "repository": {
@@ -15,7 +15,6 @@
   },
   "homepage": "https://github.com/smn-official/smn-pg#readme",
   "dependencies": {
-    "pg": "^6.1.2",
-    "pg-db": "^1.1.0"
+    "pg-promise": "^5.6.4"
   }
 }

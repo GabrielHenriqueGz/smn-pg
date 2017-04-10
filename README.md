@@ -8,7 +8,10 @@
 require('smn-pg')(config);
 ```
 
-### Only works on Node v6 and above ####
+### 
+    Only works on Node v6 and above.
+    Async methods, only works on Node v7 and above.
+####
 
 Check the operation list below.
 
@@ -23,6 +26,8 @@ Check the operation list below.
 
 * [EXECUTE](#execute-procedurename-callback)
 * [EXECUTEONE](#executeone-procedurename-callback)
+* [ASYNC_EXECUTE](#async-execute-procedurename)
+* [ASYNC_EXECUTEONE](#async-executeone-procedurename)
 
 ---------------------------------------
 
@@ -39,7 +44,8 @@ let config = {
     idleTimeoutMillis: 30000
 };;
 
-const pg = require('smn-pg')(config);
+require('smn-pg')(config);
+// SINGLE INSTANCE
 
 ```
 
@@ -50,7 +56,7 @@ const pg = require('smn-pg')(config);
 
 *Params - Value* 
 ```javascript
-/* Informar os parâmetros na mesma sequencia da procedure */
+/* Inform the params in the same sequency of prcedure */
 
 pg.request()
     .input('value')
@@ -84,9 +90,9 @@ let obj = {
     parameterName2: 'parameterValue2',
 }
 
-/* O Nome dos atributos do objeto deve ter o mesmo nome dos parâmetros */
-/* O Objeto nunca deve possuir mais atributos do que parâmetros esperados pela procedure */
-/* Caso houver um padrão de prefixo, ele pode ser passado no 2 parâmetro do método */
+/* The name of the attributes of the object must have the same name of the params. */
+/* The object must never have more attributes than params expected by the procedure */
+/* In the case have a prfix default, he can be past in the second params of the method */
 
 pg.request()
     .input(obj, /*Optional prefix name*/)
@@ -134,4 +140,22 @@ pg.request()
 
         console.log(data);
     });
+``` 
+
+### ASYNC_EXECUTE (procedureName)
+*Return list results* 
+```javascript
+
+return pg.request()
+    .asyncExecute('procedureName');
+
+``` 
+
+### ASYNC_EXECUTEONE (procedureName)
+*Return single result* 
+```javascript
+
+return pg.request()
+    .asyncExecuteOne('procedureName');
+
 ``` 
